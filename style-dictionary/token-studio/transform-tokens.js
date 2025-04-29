@@ -12,7 +12,7 @@ function cleanTokens(obj) {
  let cleanedTokens = {};
 
  Object.keys(obj).forEach(key => {
- let newKey = key.replace(/\/Mode 1$/, '').toLowerCase(); // Convert key to lowercase and remove "/Mode 1"
+ let newKey = key.replace(/\/Light$/, '').toLowerCase(); // Convert key to lowercase and remove "/Mode 1"
  let value = obj[key];
 
  if (typeof value === 'object' && !Array.isArray(value)) {
