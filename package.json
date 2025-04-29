@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "node ./style-dictionary/token-studio/transform-tokens.js && style-dictionary build --config ./style-dictionary/config.json --verbose && next build",
     "start": "next start",
     "lint": "next lint"
   },

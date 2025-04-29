@@ -1,0 +1,37 @@
+{
+     "source": ["./style-dictionary/token-studio/transformed-tokens.json"],
+     "platforms": {
+     "css": {
+     "transformGroup": "css",
+     "buildPath": "./src/style-dictionary-dist/",
+     "files": [
+     {
+     "destination": "variables.css",
+     "format": "css/variables",
+     "options": {
+     "outputReferences": true,
+     "parent": false
+     }
+     }
+     ]
+     },
+     "js": {
+     "transformGroup": "js",
+     "buildPath": "./src/style-dictionary-dist/",
+     "files": [
+     {
+     "destination": "variables.js",
+     "format": "javascript/es6",
+     "options": {
+     "outputReferences": true,
+     "parent": false
+     }
+     }
+     ]
+     }
+     },
+     "log": {
+     "verbosity": "verbose"
+     }
+    }
+    
