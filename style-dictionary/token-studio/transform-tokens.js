@@ -1,8 +1,8 @@
 import fs from 'fs';
 
 // Read the tokens from the input JSON file
-const tokensFilePath = './tokens.json'; // Input file
-const outputFilePath = './transformed-tokens.json'; // Output file
+const tokensFilePath = './style-dictionary/token-studio/tokens.json'; // Input file
+const outputFilePath = './style-dictionary/token-studio/transformed-tokens.json'; // Output file
 
 // Read tokens from the file
 const tokens = JSON.parse(fs.readFileSync(tokensFilePath, 'utf8'));
