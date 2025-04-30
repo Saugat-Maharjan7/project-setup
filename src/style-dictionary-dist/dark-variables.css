@@ -19,6 +19,7 @@
   --colors-primary-800: #a5c9cf;
   --colors-primary-900: #b5d7dd;
   --colors-primary-950: #c5e5ea;
+  --colors-primary-test-check: #ffcccc;
   --colors-background-bg: #edf5f6;
   --colors-shadow-shadow-5: rgba(67, 67, 67, 0.05);
   --colors-shadow-shadow-10: rgba(67, 67, 67, 0.1);
@@ -67,7 +68,7 @@
   --colors-tailwind-zinc-800: #e4e4e7;
   --colors-tailwind-zinc-900: #f4f4f5;
   --colors-tailwind-zinc-950: #fafafa;
-  --colors-tailwind-neutral-tailwind-50: #fafafa;
+  --colors-tailwind-neutral-tailwind-50: #0a0a0a;
   --colors-tailwind-neutral-tailwind-100: #171717;
   --colors-tailwind-neutral-tailwind-200: #262626;
   --colors-tailwind-neutral-tailwind-300: #404040;

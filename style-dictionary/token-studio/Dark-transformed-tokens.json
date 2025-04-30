@@ -72,6 +72,10 @@
       "950": {
         "value": "#c5e5ea",
         "type": "color"
+      },
+      "test-check": {
+        "value": "#ffcccc",
+        "type": "color"
       }
     },
     "background": {
@@ -441,7 +445,7 @@
       },
       "neutral-tailwind": {
         "50": {
-          "value": "#fafafa",
+          "value": "#0a0a0a",
           "type": "color"
         },
         "100": {

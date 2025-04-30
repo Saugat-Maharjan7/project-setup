@@ -9,8 +9,8 @@ const ThemeToggle = ({ isDarkMode, setIsDarkMode }: { isDarkMode: boolean; setIs
       onClick={() => setIsDarkMode(!isDarkMode)}
       className="fixed top-4 right-4 p-2 rounded-full"
       style={{
-        backgroundColor: 'var(--colors-background-secondary)',
-        color: 'var(--colors-text-primary)'
+        backgroundColor: 'var(--colors-background-bg)',
+        color: 'var(--colors-neutral-black)'
       }}
       aria-label="Toggle theme"
     >

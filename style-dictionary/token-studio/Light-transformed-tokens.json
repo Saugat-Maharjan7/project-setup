@@ -72,6 +72,10 @@
       "950": {
         "value": "#071214",
         "type": "color"
+      },
+      "test-check": {
+        "value": "#b90e0e",
+        "type": "color"
       }
     },
     "background": {
