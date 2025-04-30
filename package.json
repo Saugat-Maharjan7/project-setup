@@ -2,12 +2,13 @@
   "name": "project-setup",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "node ./style-dictionary/token-studio/transform-tokens.js && style-dictionary build --config ./style-dictionary/config.json --verbose && next build",
-   "start": "next start",
+    "start": "next start",
     "transform-tokens": "node ./style-dictionary/token-studio/transform-tokens.js",
     "build-dictionary": "npm run transform-tokens && style-dictionary build --config ./style-dictionary/lightconfig.json --verbose && style-dictionary build --config ./style-dictionary/darkconfig.json --verbose",
+    "build": "npm run build-dictionary && next build",
     "lint": "next lint"
   },
   "dependencies": {

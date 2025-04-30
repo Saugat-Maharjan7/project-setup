@@ -6,7 +6,7 @@
         "type": "color"
       },
       "always-black": {
-        "value": "#111111",
+        "value": "#000000",
         "type": "color"
       },
       "transparent": {
@@ -343,13 +343,13 @@
           "type": "color"
         },
         "950": {
-          "value": "#020617",
+          "value": "#f8fafc",
           "type": "color"
         }
       },
       "gray": {
         "50": {
-          "value": "#f9fafb",
+          "value": "#030712",
           "type": "color"
         },
         "100": {
@@ -395,7 +395,7 @@
       },
       "zinc": {
         "50": {
-          "value": "#fafafa",
+          "value": "#09090b",
           "type": "color"
         },
         "100": {
@@ -557,19 +557,19 @@
           "type": "color"
         },
         "600": {
-          "value": "#dc2626",
-          "type": "color"
-        },
-        "700": {
-          "value": "#fee2e2",
-          "type": "color"
-        },
-        "800": {
           "value": "#f87171",
           "type": "color"
         },
-        "900": {
+        "700": {
+          "value": "#fca5a5",
+          "type": "color"
+        },
+        "800": {
           "value": "#fecaca",
+          "type": "color"
+        },
+        "900": {
+          "value": "#fee2e2",
           "type": "color"
         },
         "950": {
@@ -579,7 +579,7 @@
       },
       "orange": {
         "50": {
-          "value": "#fff7ed",
+          "value": "#431407",
           "type": "color"
         },
         "100": {
@@ -671,7 +671,7 @@
       },
       "yellow": {
         "50": {
-          "value": "#fefce8",
+          "value": "#422006",
           "type": "color"
         },
         "100": {
@@ -1085,7 +1085,7 @@
       },
       "violet": {
         "50": {
-          "value": "#f5f3ff",
+          "value": "#2e1065",
           "type": "color"
         },
         "100": {
@@ -2339,6 +2339,14 @@
         "font-family2": {
           "value": "roboto",
           "type": "text"
+        },
+        "font-family": {
+          "value": "montserrat",
+          "type": "text"
+        },
+        "font-family 2": {
+          "value": "roboto",
+          "type": "text"
         }
       },
       "weight": {
@@ -2511,6 +2519,14 @@
           "type": "text"
         },
         "font-family2": {
+          "value": "roboto",
+          "type": "text"
+        },
+        "font-family": {
+          "value": "montserrat",
+          "type": "text"
+        },
+        "font-family 2": {
           "value": "roboto",
           "type": "text"
         }
@@ -2687,6 +2703,14 @@
         "font-family2": {
           "value": "roboto",
           "type": "text"
+        },
+        "font-family": {
+          "value": "montserrat",
+          "type": "text"
+        },
+        "font-family 2": {
+          "value": "roboto",
+          "type": "text"
         }
       },
       "weight": {
@@ -2859,6 +2883,14 @@
           "type": "text"
         },
         "font-family2": {
+          "value": "roboto",
+          "type": "text"
+        },
+        "font-family": {
+          "value": "montserrat",
+          "type": "text"
+        },
+        "font-family 2": {
           "value": "roboto",
           "type": "text"
         }

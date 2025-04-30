@@ -4,7 +4,7 @@
 
 :root {
   --colors-static-always-white: #ffffff;
-  --colors-static-always-black: #111111;
+  --colors-static-always-black: #000000;
   --colors-static-transparent: rgba(255, 255, 255, 0);
   --colors-static-always-gray: #030712;
   --colors-neutral-white: #ffffff;
@@ -520,6 +520,8 @@
   --tailwind-indigo-950: #1e1b4b;
   --typography-xl-font-family-font-family1: montserrat;
   --typography-xl-font-family-font-family2: roboto;
+  --typography-xl-font-family-font-family: montserrat;
+  --typography-xl-font-family-font-family-2: roboto;
   --typography-xl-weight-fw-100: thin;
   --typography-xl-weight-fw-200: extralight;
   --typography-xl-weight-fw-300: light;
@@ -560,6 +562,8 @@
   --typography-xl-paragraph-spacing-paragraph-spacing: 16px;
   --typography-lg-font-family-font-family1: montserrat;
   --typography-lg-font-family-font-family2: roboto;
+  --typography-lg-font-family-font-family: montserrat;
+  --typography-lg-font-family-font-family-2: roboto;
   --typography-lg-weight-fw-100: thin;
   --typography-lg-weight-fw-200: extralight;
   --typography-lg-weight-fw-300: light;
@@ -600,6 +604,8 @@
   --typography-lg-paragraph-spacing-paragraph-spacing: 12px;
   --typography-md-font-family-font-family1: montserrat;
   --typography-md-font-family-font-family2: roboto;
+  --typography-md-font-family-font-family: montserrat;
+  --typography-md-font-family-font-family-2: roboto;
   --typography-md-weight-fw-100: thin;
   --typography-md-weight-fw-200: extralight;
   --typography-md-weight-fw-300: light;
@@ -640,6 +646,8 @@
   --typography-md-paragraph-spacing-paragraph-spacing: 8px;
   --typography-sm-font-family-font-family1: montserrat;
   --typography-sm-font-family-font-family2: roboto;
+  --typography-sm-font-family-font-family: montserrat;
+  --typography-sm-font-family-font-family-2: roboto;
   --typography-sm-weight-fw-100: thin;
   --typography-sm-weight-fw-200: extralight;
   --typography-sm-weight-fw-300: light;

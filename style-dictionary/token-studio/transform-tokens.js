@@ -69,8 +69,8 @@ const processTokens = (theme, keys, tokens) => {
     }
 
     const cleanKey = key
-      .replace(colors/${theme}, 'colors')
-      .replace(tailwind/${theme}, 'tailwind')
+      .replace(`colors/${theme}`, 'colors')
+      .replace(`tailwind/${theme}`, 'tailwind')
       .replace(/^typography\//, 'typography.')
       .replace(/^heading\/paragraph\//, 'typography.');
 
@@ -94,8 +94,8 @@ fs.mkdirSync(outputDir, { recursive: true });
 
 Object.entries(tokenGroups).forEach(([theme, keys]) => {
   const processedTokens = processTokens(theme, keys, tokens);
-  const filename = ${theme}-transformed-tokens.json;
+  const filename = `${theme}-transformed-tokens.json`;
   const outputPath = path.join(outputDir, filename);
   fs.writeFileSync(outputPath, JSON.stringify(processedTokens, null, 2), 'utf8');
-  console.log(✅ ${theme} tokens transformed and saved to: ${outputPath});
+  console.log(`✅ ${theme} tokens transformed and saved to: ${outputPath}`);
 });

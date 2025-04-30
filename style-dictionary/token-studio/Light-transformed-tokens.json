@@ -6,7 +6,7 @@
         "type": "color"
       },
       "always-black": {
-        "value": "#111111",
+        "value": "#000000",
         "type": "color"
       },
       "transparent": {
@@ -2339,6 +2339,14 @@
         "font-family2": {
           "value": "roboto",
           "type": "text"
+        },
+        "font-family": {
+          "value": "montserrat",
+          "type": "text"
+        },
+        "font-family 2": {
+          "value": "roboto",
+          "type": "text"
         }
       },
       "weight": {
@@ -2511,6 +2519,14 @@
           "type": "text"
         },
         "font-family2": {
+          "value": "roboto",
+          "type": "text"
+        },
+        "font-family": {
+          "value": "montserrat",
+          "type": "text"
+        },
+        "font-family 2": {
           "value": "roboto",
           "type": "text"
         }
@@ -2687,6 +2703,14 @@
         "font-family2": {
           "value": "roboto",
           "type": "text"
+        },
+        "font-family": {
+          "value": "montserrat",
+          "type": "text"
+        },
+        "font-family 2": {
+          "value": "roboto",
+          "type": "text"
         }
       },
       "weight": {
@@ -2859,6 +2883,14 @@
           "type": "text"
         },
         "font-family2": {
+          "value": "roboto",
+          "type": "text"
+        },
+        "font-family": {
+          "value": "montserrat",
+          "type": "text"
+        },
+        "font-family 2": {
           "value": "roboto",
           "type": "text"
         }

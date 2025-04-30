@@ -4,7 +4,7 @@
 
 :root {
   --colors-static-always-white: #ffffff;
-  --colors-static-always-black: #111111;
+  --colors-static-always-black: #000000;
   --colors-static-transparent: rgba(255, 255, 255, 0);
   --colors-static-always-gray: #030712;
   --colors-neutral-white: #111111;
@@ -44,8 +44,8 @@
   --colors-tailwind-slate-700: #cbd5e1;
   --colors-tailwind-slate-800: #e2e8f0;
   --colors-tailwind-slate-900: #f1f5f9;
-  --colors-tailwind-slate-950: #020617;
-  --colors-tailwind-gray-50: #f9fafb;
+  --colors-tailwind-slate-950: #f8fafc;
+  --colors-tailwind-gray-50: #030712;
   --colors-tailwind-gray-100: #111827;
   --colors-tailwind-gray-200: #1f2937;
   --colors-tailwind-gray-300: #374151;
@@ -56,7 +56,7 @@
   --colors-tailwind-gray-800: #e5e7eb;
   --colors-tailwind-gray-900: #f3f4f6;
   --colors-tailwind-gray-950: #f9fafb;
-  --colors-tailwind-zinc-50: #fafafa;
+  --colors-tailwind-zinc-50: #09090b;
   --colors-tailwind-zinc-100: #18181b;
   --colors-tailwind-zinc-200: #27272a;
   --colors-tailwind-zinc-300: #3f3f46;
@@ -95,12 +95,12 @@
   --colors-tailwind-red-300: #991b1b;
   --colors-tailwind-red-400: #dc2626;
   --colors-tailwind-red-500: #ef4444;
-  --colors-tailwind-red-600: #dc2626;
-  --colors-tailwind-red-700: #fee2e2;
-  --colors-tailwind-red-800: #f87171;
-  --colors-tailwind-red-900: #fecaca;
+  --colors-tailwind-red-600: #f87171;
+  --colors-tailwind-red-700: #fca5a5;
+  --colors-tailwind-red-800: #fecaca;
+  --colors-tailwind-red-900: #fee2e2;
   --colors-tailwind-red-950: #fef2f2;
-  --colors-tailwind-orange-50: #fff7ed;
+  --colors-tailwind-orange-50: #431407;
   --colors-tailwind-orange-100: #7c2d12;
   --colors-tailwind-orange-200: #9a3412;
   --colors-tailwind-orange-300: #c2410c;
@@ -122,7 +122,7 @@
   --colors-tailwind-amber-800: #fde68a;
   --colors-tailwind-amber-900: #fef3c7;
   --colors-tailwind-amber-950: #fffbeb;
-  --colors-tailwind-yellow-50: #fefce8;
+  --colors-tailwind-yellow-50: #422006;
   --colors-tailwind-yellow-100: #713f12;
   --colors-tailwind-yellow-200: #854d0e;
   --colors-tailwind-yellow-300: #a16207;
@@ -221,7 +221,7 @@
   --colors-tailwind-indigo-800: #c7d2fe;
   --colors-tailwind-indigo-900: #e0e7ff;
   --colors-tailwind-indigo-950: #eef2ff;
-  --colors-tailwind-violet-50: #f5f3ff;
+  --colors-tailwind-violet-50: #2e1065;
   --colors-tailwind-violet-100: #4c1d95;
   --colors-tailwind-violet-200: #5b21b6;
   --colors-tailwind-violet-300: #6d28d9;
@@ -520,6 +520,8 @@
   --tailwind-indigo-950: #eef2ff;
   --typography-xl-font-family-font-family1: montserrat;
   --typography-xl-font-family-font-family2: roboto;
+  --typography-xl-font-family-font-family: montserrat;
+  --typography-xl-font-family-font-family-2: roboto;
   --typography-xl-weight-fw-100: thin;
   --typography-xl-weight-fw-200: extralight;
   --typography-xl-weight-fw-300: light;
@@ -560,6 +562,8 @@
   --typography-xl-paragraph-spacing-paragraph-spacing: 16px;
   --typography-lg-font-family-font-family1: montserrat;
   --typography-lg-font-family-font-family2: roboto;
+  --typography-lg-font-family-font-family: montserrat;
+  --typography-lg-font-family-font-family-2: roboto;
   --typography-lg-weight-fw-100: thin;
   --typography-lg-weight-fw-200: extralight;
   --typography-lg-weight-fw-300: light;
@@ -600,6 +604,8 @@
   --typography-lg-paragraph-spacing-paragraph-spacing: 12px;
   --typography-md-font-family-font-family1: montserrat;
   --typography-md-font-family-font-family2: roboto;
+  --typography-md-font-family-font-family: montserrat;
+  --typography-md-font-family-font-family-2: roboto;
   --typography-md-weight-fw-100: thin;
   --typography-md-weight-fw-200: extralight;
   --typography-md-weight-fw-300: light;
@@ -640,6 +646,8 @@
   --typography-md-paragraph-spacing-paragraph-spacing: 8px;
   --typography-sm-font-family-font-family1: montserrat;
   --typography-sm-font-family-font-family2: roboto;
+  --typography-sm-font-family-font-family: montserrat;
+  --typography-sm-font-family-font-family-2: roboto;
   --typography-sm-weight-fw-100: thin;
   --typography-sm-weight-fw-200: extralight;
   --typography-sm-weight-fw-300: light;
