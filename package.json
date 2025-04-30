@@ -8,7 +8,8 @@
     "start": "next start",
     "transform-tokens": "node ./style-dictionary/token-studio/transform-tokens.js",
     "build-dictionary": "npm run transform-tokens && style-dictionary build --config ./style-dictionary/lightconfig.json --verbose && style-dictionary build --config ./style-dictionary/darkconfig.json --verbose",
-    "build": "npm run build-dictionary && next build",
+    "css-merge":"node style-dictionary/merge-css.js",
+    "build": "npm run build-dictionary && node ./style-dictionary/merge-css.js && next build",
     "lint": "next lint"
   },
   "dependencies": {
