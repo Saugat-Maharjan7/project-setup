@@ -1,8 +1,9 @@
 @import "tailwindcss";
+@import "../src/style-dictionary-dist/variables.css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: var(--colors-tailwind-red-500);
+  --foreground: var(--colors-neutral-black);
 }
 
 @theme inline {
@@ -14,8 +15,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--colors-tailwind-blue-500);
+    --foreground: var(--colors-neutral-white);
   }
 }
 
