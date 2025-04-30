@@ -1,40 +1,101 @@
 import fs from 'fs';
+import path from 'path';
 
-// Read the tokens from the input JSON file
-const tokensFilePath = './style-dictionary/token-studio/tokens.json'; // Input file
-const outputFilePath = './style-dictionary/token-studio/transformed-tokens.json'; // Output file
+const sourcePath = './style-dictionary/token-studio/tokens.json';
+const outputDir = './style-dictionary/token-studio';
 
-// Read tokens from the file
-const tokens = JSON.parse(fs.readFileSync(tokensFilePath, 'utf8'));
+const tokenGroups = {
+  Light: [
+    'colors/Light',
+    'tailwind/Light',
+    'typography/XL',
+    'typography/LG',
+    'typography/MD',
+    'typography/SM',
+    'heading/paragraph/HeadingsMontserrat',
+    'heading/paragraph/ParagraphsRoboto',
+    'dimensions/XL'
+  ],
+  Dark: [
+    'colors/Dark',
+    'tailwind/Dark',
+    'typography/XL',
+    'typography/LG',
+    'typography/MD',
+    'typography/SM',
+    'heading/paragraph/HeadingsMontserrat',
+    'heading/paragraph/ParagraphsRoboto',
+    'dimensions/XL'
+  ]
+};
 
-// Function to recursively clean, flatten, and lowercase token structure
-function cleanTokens(obj) {
- let cleanedTokens = {};
+const cleanTokens = (obj, removeParentKey) => {
+  if (typeof obj !== 'object') return obj;
+  const cleaned = {};
 
- Object.keys(obj).forEach(key => {
- let newKey = key.replace(/\/Light$/, '').toLowerCase(); // Convert key to lowercase and remove "/Mode 1"
- let value = obj[key];
+  for (const [key, value] of Object.entries(obj)) {
+    if (
+      removeParentKey &&
+      (key.toLowerCase() === 'colors' || key.toLowerCase() === 'typography' || key.toLowerCase() === 'dimensions') &&
+      typeof value === 'object'
+    ) {
+      Object.assign(cleaned, cleanTokens(value, false));
+    } else if (typeof value === 'object' && value.value !== undefined) {
+      cleaned[key.toLowerCase()] = value;
+    } else if (typeof value === 'object') {
+      cleaned[key.toLowerCase()] = cleanTokens(value, removeParentKey);
+    } else {
+      cleaned[key.toLowerCase()] = value;
+    }
+  }
 
- if (typeof value === 'object' && !Array.isArray(value)) {
- // Flatten structure if the child key is the same as the parent
- if (Object.keys(value).length === 1 && Object.keys(value)[0].toLowerCase() === newKey) {
- cleanedTokens[newKey] = cleanTokens(value[Object.keys(value)[0]]);
- } else {
- cleanedTokens[newKey] = cleanTokens(value);
- }
- } else {
- // Assign the value directly if it's not an object
- cleanedTokens[newKey] = value;
- }
- });
+  return cleaned;
+};
 
- return cleanedTokens;
-}
+const processTokens = (theme, keys, tokens) => {
+  const output = {};
 
-// Apply transformation
-const cleanedTokens = cleanTokens(tokens);
+  keys.forEach((key) => {
+    const tokenValue = tokens[key];
+    if (!tokenValue) return;
 
-// Write the transformed tokens to a new JSON file
-fs.writeFileSync(outputFilePath, JSON.stringify(cleanedTokens, null, 2), 'utf8');
+    if (key === 'dimensions/XL') {
+      const cleaned = cleanTokens(tokenValue, true);
+      output.dimensions = {};
+      for (const subKey in cleaned) {
+        output.dimensions[subKey] = cleaned[subKey];
+      }
+      return;
+    }
 
-console.log('Tokens have been successfully transformed and saved to', outputFilePath);
+    const cleanKey = key
+      .replace(colors/${theme}, 'colors')
+      .replace(tailwind/${theme}, 'tailwind')
+      .replace(/^typography\//, 'typography.')
+      .replace(/^heading\/paragraph\//, 'typography.');
+
+    const parts = cleanKey.split(/[./]/);
+    let current = output;
+
+    for (let i = 0; i < parts.length - 1; i++) {
+      const part = parts[i].toLowerCase();
+      if (!current[part]) current[part] = {};
+      current = current[part];
+    }
+
+    current[parts[parts.length - 1].toLowerCase()] = cleanTokens(tokenValue, true);
+  });
+
+  return output;
+};
+
+const tokens = JSON.parse(fs.readFileSync(sourcePath, 'utf8'));
+fs.mkdirSync(outputDir, { recursive: true });
+
+Object.entries(tokenGroups).forEach(([theme, keys]) => {
+  const processedTokens = processTokens(theme, keys, tokens);
+  const filename = ${theme}-transformed-tokens.json;
+  const outputPath = path.join(outputDir, filename);
+  fs.writeFileSync(outputPath, JSON.stringify(processedTokens, null, 2), 'utf8');
+  console.log(✅ ${theme} tokens transformed and saved to: ${outputPath});
+});
