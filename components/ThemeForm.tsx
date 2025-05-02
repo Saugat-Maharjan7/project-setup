@@ -25,7 +25,7 @@ export default function ThemeForm() {
       root.style.setProperty('--colors-text-text-light', '#ffffff');
       root.style.setProperty('--colors-border-border-dark', '#333333');
       root.style.setProperty('--colors-neutral-black', '#000000');
-      root.style.setProperty('--colors-tailwind-red-500', 'var(--colors-tailwind-blue-500)');
+      root.style.setProperty('--colors-tailwind-red-500', 'var(--colors-tailwind-blue-700)');
       root.style.setProperty('--colors-tailwind-red-700', 'var(--colors-tailwind-red-600)');
     } else {
       root.style.setProperty('--colors-primary-500', 'var(--colors-neutral-white)');

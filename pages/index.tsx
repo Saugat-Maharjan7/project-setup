@@ -1,12 +1,15 @@
 import React from 'react';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import Image from 'next/image';
 import { Geist, Geist_Mono } from "next/font/google";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -14,48 +17,48 @@ const geistMono = Geist_Mono({
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-between p-24">
+    <div className={`${geistSans.className} ${geistMono.className} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20`}>
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start bg-[var(--colors-neutral-black)] p-[var(--dimensions-paddings-padding-3xl)]">
         <div className="text-[var(--colors-tailwind-red-300)] font-bold text-[36px]">
           <h1>NEXT.JS</h1>
         </div>
         <div className="p-[var(--dimensions-paddings-padding-5xl)] bg-[var(--colors-primary-test-check)] inline-flex flex-col justify-center items-center gap-2.5">
           <div className="justify-start">
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">--background: var(--primary-white);  --foreground: #0A0A0A;  --card: </span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">#FFFFFF</span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">;  --card-foreground: #0A0A0A;  --popover: </span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">#FFFFFF</span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">;  --popover-foreground: #0A0A0A;  --primary: #181818;  --primary-foreground: </span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">#FAFAFA</span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">;  --secondary: </span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">#F2F2F2</span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">;  --secondary-foreground: #181818;  --muted: </span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">#F2F2F2</span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">;  --muted-foreground: #757575;  --accent: </span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">#F2F2F2</span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">;  --accent-foreground: #181818;  --destructive: </span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">#CC3333</span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">;  --destructive-foreground: </span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">#FAFAFA</span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">;  --border: </span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">#E5E5E5</span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">;  --input: </span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">#E5E5E5</span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">;  --ring: #808080;  --radius: 0.5rem;  --chart-1: </span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">#E4572E</span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">;  --chart-2: #248888;  --chart-3: #1F5673;  --chart-4: </span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">#E3A72F</span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">;  --chart-5: </span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">#F29E4C</span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">;  --sidebar-background: </span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">#FAFAFA</span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">;  --sidebar-foreground: #393939;  --sidebar-primary: #181818;  --sidebar-primary-foreground: </span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">#FAFAFA</span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">;  --sidebar-accent: </span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">#F2F2F2</span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">;  --sidebar-accent-foreground: #181818;  --sidebar-border: </span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">#D5D5D5</span>
-            <span className="text-white text-base font-medium font-['Montserrat'] leading-normal">;  --sidebar-ring: #808080;<br/>--button-primary: var(--primary)</span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">--background: var(--primary-white);  --foreground: #0A0A0A;  --card: </span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">#FFFFFF</span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">;  --card-foreground: #0A0A0A;  --popover: </span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">#FFFFFF</span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">;  --popover-foreground: #0A0A0A;  --primary: #181818;  --primary-foreground: </span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">#FAFAFA</span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">;  --secondary: </span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">#F2F2F2</span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">;  --secondary-foreground: #181818;  --muted: </span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">#F2F2F2</span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">;  --muted-foreground: #757575;  --accent: </span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">#F2F2F2</span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">;  --accent-foreground: #181818;  --destructive: </span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">#CC3333</span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">;  --destructive-foreground: </span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">#FAFAFA</span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">;  --border: </span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">#E5E5E5</span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">;  --input: </span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">#E5E5E5</span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">;  --ring: #808080;  --radius: 0.5rem;  --chart-1: </span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">#E4572E</span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">;  --chart-2: #248888;  --chart-3: #1F5673;  --chart-4: </span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">#E3A72F</span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">;  --chart-5: </span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">#F29E4C</span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">;  --sidebar-background: </span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">#FAFAFA</span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">;  --sidebar-foreground: #393939;  --sidebar-primary: #181818;  --sidebar-primary-foreground: </span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">#FAFAFA</span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">;  --sidebar-accent: </span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">#F2F2F2</span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">;  --sidebar-accent-foreground: #181818;  --sidebar-border: </span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">#D5D5D5</span>
+            <span className="text-white text-base font-medium font-montserrat leading-normal">;  --sidebar-ring: #808080;<br/>--button-primary: var(--primary)</span>
           </div>
         </div>
         <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
