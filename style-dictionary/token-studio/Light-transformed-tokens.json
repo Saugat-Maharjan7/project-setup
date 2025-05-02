@@ -74,7 +74,7 @@
         "type": "color"
       },
       "test-check": {
-        "value": "#f7f134",
+        "value": "#ff0a0a",
         "type": "color"
       }
     },
@@ -3376,7 +3376,7 @@
         "type": "dimension"
       },
       "padding-5xl": {
-        "value": "{dimensions.size.4}",
+        "value": "{dimensions.size.10}",
         "type": "dimension"
       }
     },

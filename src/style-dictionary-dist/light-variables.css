@@ -19,7 +19,7 @@
   --colors-primary-800: #0e2428;
   --colors-primary-900: #0b1b1e;
   --colors-primary-950: #071214;
-  --colors-primary-test-check: #f7f134;
+  --colors-primary-test-check: #ff0a0a;
   --colors-background-bg: #edf5f6;
   --colors-shadow-shadow-5: rgba(0, 0, 0, 0.05);
   --colors-shadow-shadow-10: rgba(0, 0, 0, 0.1);
@@ -801,7 +801,7 @@
   --dimensions-paddings-padding-2xl: var(--dimensions-size-6-5);
   --dimensions-paddings-padding-3xl: var(--dimensions-size-8);
   --dimensions-paddings-padding-4xl: var(--dimensions-size-9);
-  --dimensions-paddings-padding-5xl: var(--dimensions-size-4);
+  --dimensions-paddings-padding-5xl: var(--dimensions-size-10);
   --dimensions-radius-radius-sm: var(--dimensions-size-0-5);
   --dimensions-radius-radius-md: var(--dimensions-size-1);
   --dimensions-radius-radius-lg: var(--dimensions-size-2);
