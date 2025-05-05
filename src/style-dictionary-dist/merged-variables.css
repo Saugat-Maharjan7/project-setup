@@ -19,7 +19,7 @@
   --colors-primary-800: #0e2428;
   --colors-primary-900: #0b1b1e;
   --colors-primary-950: #071214;
-  --colors-primary-test-check: #ff0a0a;
+  --colors-primary-test-check: #0aff12;
   --colors-background-bg: #edf5f6;
   --colors-shadow-shadow-5: rgba(0, 0, 0, 0.05);
   --colors-shadow-shadow-10: rgba(0, 0, 0, 0.1);
@@ -860,7 +860,7 @@
   --colors-primary-800: #a5c9cf;
   --colors-primary-900: #b5d7dd;
   --colors-primary-950: #c5e5ea;
-  --colors-primary-test-check: #003cd3;
+  --colors-primary-test-check: #d39000;
   --colors-background-bg: #edf5f6;
   --colors-shadow-shadow-5: rgba(67, 67, 67, 0.05);
   --colors-shadow-shadow-10: rgba(67, 67, 67, 0.1);
